@@ -12,6 +12,7 @@ async function main() {
 
         const msg = await wallet.signMessage(MESSAGE);
         console.log(wallet.address, msg);
+        fs.appendFileSync('./result.txt', `${wallet.address}:${msg}`)
     }
 }
 
